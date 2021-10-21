@@ -1,22 +1,23 @@
 public class SindromeStatisticServise {
 
-    public class StatsService {
-        public int CalculateSum(int[] sales) {
+
+
+        public long CalculateSum(long[] sales) {
             int sum = 0;
-            for (int sale : sales) {
+            for (long sale : sales) {
                 sum += sale;
             }
             return sum;
         }
-        public int findAverage(int[] sales)
+        public long findAverage(long[] sales)
         {
             return CalculateSum(sales)/ sales.length;
         }
 
-        public int findMax(int[] sales) {
+        public long findMax(long[] sales) {
             int max = 0;
             int month = 0;
-            for (int sale : sales) {
+            for (long sale : sales) {
                 if (sale >= sales[max]) {
                     max = month;
                 }
@@ -24,21 +25,20 @@ public class SindromeStatisticServise {
             }
             return max + 1;
         }
-        public int findMin(int[] sales) {
-            int min = 0;
-            int month = 0;
-            for (int sale : sales) {
+        public long findMin(long[] sales) {
+           int min = 0;
+           int month = 0;
+            for ( long sale : sales) {
                 if (sale <= sales[min]) {
                     min = month;
-                }
-                month = month + 1;
+                } month = month + 1;
             }
             return min + 1;
         }
-        public int numberBelowAverage(int[] sales) {
-            int average =  CalculateSum(sales)/ sales.length;
-            int month = 0;
-            for (int sale : sales) {
+        public long numberBelowAverage(long[] sales) {
+            long average =  CalculateSum(sales)/ sales.length;
+           int month = 0;
+            for (long sale : sales) {
                 if (sale > average) {
                     month = month + 1;
                 }
@@ -46,10 +46,10 @@ public class SindromeStatisticServise {
             return month;
         }
 
-        public int numbersAboveAverage(int[] sales) {
-            int average =  CalculateSum(sales)/ sales.length;
+        public long numbersAboveAverage(long[] sales) {
+            long average =  CalculateSum(sales)/ sales.length;
             int month = 0;
-            for (int sale : sales) {
+            for (long sale : sales) {
                 if (sale < average) {
                     month = month + 1;
                 }
@@ -58,4 +58,4 @@ public class SindromeStatisticServise {
         }
     }
 
-}
+
