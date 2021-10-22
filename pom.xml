@@ -22,7 +22,7 @@
         </dependency>
 
     </dependencies>
-    <build>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -52,8 +52,7 @@
                         </goals>
                     </execution>
                     <execution>
-                        <rules>
-                            <rule>
+                                                  <rule>
                             <element>BUNDLE</element>
                             <limits>
                                 <limit>
@@ -75,5 +74,6 @@
             </plugin>
 </plugins>
         </build>
+</builds>
 
   </project>
